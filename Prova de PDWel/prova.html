@@ -1,0 +1,18 @@
+<? php
+  if ( $ _POST ) {
+    echo  "O valor de n é:" . $ _GET [ "n" ];
+    echo  "<br> Os numeros são múltiplos são:" ;
+
+    foreach ( $ _POST [ "m" ] as  $ numero ) {
+      if ( $ numero % $ _POST [ "n" ] == 0 ) {
+       echo  "<br>" . $ numero ;
+      }
+    }
+  }
+?>
+
+< form  method = " post " >
+  M: < valor  tipo = texto  nome = M [] > < br >
+  B: < valor  tipo = texto  nome = n > < br >
+  < input  type = submit  value = " OK " >
+</ form >
